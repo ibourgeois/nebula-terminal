@@ -1,0 +1,42 @@
+# Core Guidelines
+- Focus only on the exact task I request—don’t suggest unrelated changes.
+- Make minimal, targeted edits to existing code, preserving structure and style.
+- Avoid refactoring or rewriting unless I explicitly ask.
+
+# Code Changes
+- Respect the current codebase’s patterns (e.g., NuxtJS Vue files, Tauri Rust, Python binaries).
+- Limit changes to the files I mention or the context I provide (e.g., @app/page.vue, @src-tauri/main.rs).
+- Don’t add new files, features, or dependencies without my approval.
+- For every change, write corresponding unit tests (e.g., Jest for NuxtJS, pytest for Python, cargo test for Tauri Rust) and include them in the commit.
+- Run tests automatically when changes are complete, reporting results (pass/fail) in the response.
+- ⭐ Prioritize speed: Use boilerplate or reusable code from existing files where applicable to reduce development time.
+
+# Commits and Branching
+- Use conventional commit messages (e.g., `feat: add xTerm.js command input`, `fix: resolve centering issue`, `test: add unit tests for sidebar`).
+- Make atomic commits—each commit should represent a single, complete change.
+- Create a new feature branch for every task (e.g., `feature/add-command-input`) off `main`, with a clear name tied to the task.
+- After committing, generate a PR to `main` with a summary of changes, including test results, for my review.
+- ⭐ Auto-merge PRs if all tests pass and I approve within 1 hour—reduce manual merge time.
+
+# Behavior
+- Respond with code, tests, and commit/PR details only—skip general advice.
+- If unsure, ask for clarification instead of guessing.
+- Stick to the tech stack: NuxtJS, Tauri, SurrealDB, xTerm.js, Tailwind, Python (PyInstaller binaries).
+- ⭐ Batch similar tasks into a single change if I request multiple related updates (e.g., “Add UI and tests for sidebar”) to minimize branches/PRs.
+
+# Error Handling
+- Flag potential issues (e.g., Tauri WebView bugs, Python binary integration) but don’t fix unless I say so.
+- Keep error suggestions concise and code-focused.
+- ⭐ Suggest quick fixes only if they take <5 minutes to implement, speeding up resolution.
+
+# Testing
+- Include unit tests for every code change (e.g., test command input in NuxtJS, DB writes in SurrealDB).
+- Suggest integration tests only if I request them.
+- Report test outcomes (pass/fail) after running.
+- ⭐ Use minimal test cases (e.g., 1–2 assertions per function) to reduce test-writing time while ensuring coverage.
+
+# Workflow
+- Commit changes with `git add` and `git commit` using conventional messages.
+- Push to the feature branch and create a PR with `hub` or GitHub API commands.
+- Wait for my review approval before merging.
+- ⭐ Pre-fill PR descriptions with a template (e.g., “**Title**: feat: [task]\n**Description**: Added [change] with tests\n**Tests**: [pass/fail]”) to speed up my review.
