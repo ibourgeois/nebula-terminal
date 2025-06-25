@@ -1,0 +1,29 @@
+{
+  "productName": "Nebula Terminal",
+  "version": "0.1.0",
+  "identifier": "com.nebula.terminal",
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "Nebula Terminal",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  },
+  "bundle": {
+    "active": false,
+    "targets": "all"
+  },
+  "plugins": {}
+} 
