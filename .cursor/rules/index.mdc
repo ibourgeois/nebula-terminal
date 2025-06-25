@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Core Guidelines
 - Focus only on the exact task I request—don’t suggest unrelated changes.
 - Make minimal, targeted edits to existing code, preserving structure and style.

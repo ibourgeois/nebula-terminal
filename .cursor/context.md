@@ -1,0 +1,16 @@
+# Nebula Terminal Context
+- **Project**: An open-source, privacy-first terminal emulator named "Nebula Terminal" hosted at nebula.sh, built as a desktop app.
+- **Tech Stack**: Tauri (Rust backend), NuxtJS (Vue 3, TypeScript), xTerm.js (terminal UI), Tailwind CSS (modern dark theme), SurrealDB (file-based, nebula.db for blocks), Python (requests, openai) packaged as PyInstaller binaries for LLM support.
+- **Features to Build**:
+  - Color output via pty.
+  - Session management stored in SurrealDB (schema: { id, command, output, tokens, session_llm, block_llm, created_at }).
+  - Block-based UI with inline editing and command history.
+  - Tab completion, backspace, copy/paste.
+  - Local LLM integration (e.g., Ollama) with settings configurable via Tauri’s system menu (e.g., macOS menu bar, Windows tray) including endpoint, model, and API key, and an "Explain" button.
+  - Tty app support (e.g., nano, vi) with interactive shells.
+  - SSH and Docker shell support (v0.2).
+  - Nord theme support (later).
+- **Goals**: Daily-use terminal, untested features for v0.2, open-source community focus.
+- **Workflow**: Conventional commits (feat:, fix:, test:), atomic changes, feature branches (e.g., feature/tauri-setup), PRs to main, unit tests (allow Cursor to choose framework: Jest, Vitest, pytest, cargo test).
+- **Constraints**: No unrelated changes, stick to stack, avoid re-creating prompts, focus on one PR at a time. Settings are managed via Tauri system menu, not web-style pages.
+- **Approach**: Build in small, incremental PRs starting with Tauri setup, then add NuxtJS, etc.
