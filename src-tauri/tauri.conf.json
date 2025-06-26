@@ -4,7 +4,7 @@
   "identifier": "com.nebula.terminal",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "npm run generate && rm -rf dist && cp -r .output/public dist",
     "devUrl": "http://localhost:3000",
     "frontendDist": "../dist"
   },
