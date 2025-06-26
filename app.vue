@@ -95,7 +95,7 @@ const executeCommand = () => {
 onMounted(() => {
   nextTick(() => {
     // Focus the command input
-    if (commandInput.value) {
+    if (commandInput.value !== null) {
       commandInput.value.focus()
     }
   })
