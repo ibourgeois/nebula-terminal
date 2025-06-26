@@ -7,6 +7,16 @@ Cargo.lock
 src-tauri/target/
 src-tauri/Cargo.lock
 
+# Node.js/NuxtJS
+node_modules/
+.nuxt/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
 # Build outputs
 dist/
 build/
@@ -27,7 +37,12 @@ Thumbs.db
 *.swo
 *~
 
-# Tauri placeholder icons (can be replaced with real icons later)
-src-tauri/icons/*.png
-src-tauri/icons/*.ico
-src-tauri/icons/*.icns 
+# Logs
+logs
+*.log
+
+# Misc
+.fleet
+.env
+.env.*
+!.env.example
