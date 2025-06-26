@@ -7,27 +7,8 @@
         <div class="h-full flex flex-col">
           <!-- Terminal Output -->
           <div class="flex-1 overflow-y-auto space-y-1">
-            <!-- Welcome Message -->
-            <div class="font-bold" style="color: #88C0D0;">
-              ╭─────────────────────────────────────────────────────────────╮
-            </div>
-            <div class="font-bold text-center" style="color: #88C0D0;">
-              │                    Nebula Terminal v0.1.0                    │
-            </div>
-            <div class="font-bold" style="color: #88C0D0;">
-              ╰─────────────────────────────────────────────────────────────╯
-            </div>
-            
-            <div class="text-sm mt-4" style="color: #D8DEE9;">
-              Welcome to Nebula Terminal - A modern cross-platform terminal built with Tauri, NuxtJS, and TailwindCSS.
-            </div>
-            
-            <div class="text-sm mt-2" style="color: #D8DEE9;">
-              Type <span class="font-mono" style="color: #88C0D0;">help</span> to see available commands.
-            </div>
-
             <!-- Sample Terminal Output -->
-            <div class="mt-6 space-y-1">
+            <div class="space-y-1">
               <div class="flex items-center">
                 <span class="font-mono mr-2" style="color: #A3BE8C;">$</span>
                 <span class="font-mono" style="color: #ECEFF4;">ls -la</span>
