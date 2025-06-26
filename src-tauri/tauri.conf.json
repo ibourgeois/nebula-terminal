@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "identifier": "com.nebula.terminal",
   "build": {
-    "beforeDevCommand": "",
-    "beforeBuildCommand": "",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:3000",
     "frontendDist": "../dist"
   },
   "app": {
