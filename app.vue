@@ -1,62 +1,38 @@
 <template>
-  <div class="min-h-screen bg-terminal-bg text-terminal-fg font-terminal">
+  <div class="min-h-screen font-mono" style="background-color: #2E3440; color: #ECEFF4;">
     <!-- Terminal Window -->
     <div class="h-screen flex flex-col">
-      <!-- Terminal Title Bar -->
-      <div class="bg-nord-1 border-b border-nord-2 flex items-center justify-between px-4 py-2">
-        <div class="flex items-center space-x-2">
-          <!-- Window Controls -->
-          <div class="flex space-x-2">
-            <div class="w-3 h-3 rounded-full bg-nord-11"></div>
-            <div class="w-3 h-3 rounded-full bg-nord-13"></div>
-            <div class="w-3 h-3 rounded-full bg-nord-14"></div>
-          </div>
-          <!-- Title -->
-          <div class="ml-4 text-nord-4 text-sm font-medium">
-            nebula-terminal — zsh
-          </div>
-        </div>
-        <!-- Window Actions -->
-        <div class="flex items-center space-x-2 text-nord-4">
-          <button class="hover:text-nord-6 transition-colors">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
       <!-- Terminal Content Area -->
-      <div class="flex-1 bg-terminal-bg p-4 overflow-hidden">
+      <div class="flex-1 p-4 overflow-hidden" style="background-color: #2E3440;">
         <div class="h-full flex flex-col">
           <!-- Terminal Output -->
           <div class="flex-1 overflow-y-auto space-y-1">
             <!-- Welcome Message -->
-            <div class="text-nord-8 font-bold">
+            <div class="font-bold" style="color: #88C0D0;">
               ╭─────────────────────────────────────────────────────────────╮
             </div>
-            <div class="text-nord-8 font-bold text-center">
+            <div class="font-bold text-center" style="color: #88C0D0;">
               │                    Nebula Terminal v0.1.0                    │
             </div>
-            <div class="text-nord-8 font-bold">
+            <div class="font-bold" style="color: #88C0D0;">
               ╰─────────────────────────────────────────────────────────────╯
             </div>
             
-            <div class="text-nord-4 text-sm mt-4">
+            <div class="text-sm mt-4" style="color: #D8DEE9;">
               Welcome to Nebula Terminal - A modern cross-platform terminal built with Tauri, NuxtJS, and TailwindCSS.
             </div>
             
-            <div class="text-nord-4 text-sm mt-2">
-              Type <span class="text-nord-8 font-mono">help</span> to see available commands.
+            <div class="text-sm mt-2" style="color: #D8DEE9;">
+              Type <span class="font-mono" style="color: #88C0D0;">help</span> to see available commands.
             </div>
 
             <!-- Sample Terminal Output -->
             <div class="mt-6 space-y-1">
               <div class="flex items-center">
-                <span class="text-nord-14 font-mono mr-2">$</span>
-                <span class="text-nord-6 font-mono">ls -la</span>
+                <span class="font-mono mr-2" style="color: #A3BE8C;">$</span>
+                <span class="font-mono" style="color: #ECEFF4;">ls -la</span>
               </div>
-              <div class="text-nord-4 text-sm ml-4 font-mono">
+              <div class="text-sm ml-4 font-mono" style="color: #D8DEE9;">
                 total 8<br>
                 drwxr-xr-x  15 user  staff   480 Dec 26 01:15 .<br>
                 drwxr-xr-x   3 user  staff    96 Dec 26 01:15 ..<br>
@@ -70,20 +46,20 @@
 
             <div class="mt-4 space-y-1">
               <div class="flex items-center">
-                <span class="text-nord-14 font-mono mr-2">$</span>
-                <span class="text-nord-6 font-mono">pwd</span>
+                <span class="font-mono mr-2" style="color: #A3BE8C;">$</span>
+                <span class="font-mono" style="color: #ECEFF4;">pwd</span>
               </div>
-              <div class="text-nord-4 text-sm ml-4 font-mono">
+              <div class="text-sm ml-4 font-mono" style="color: #D8DEE9;">
                 /Users/user/code/github/ibourgeois/nebula
               </div>
             </div>
 
             <div class="mt-4 space-y-1">
               <div class="flex items-center">
-                <span class="text-nord-14 font-mono mr-2">$</span>
-                <span class="text-nord-6 font-mono">git status</span>
+                <span class="font-mono mr-2" style="color: #A3BE8C;">$</span>
+                <span class="font-mono" style="color: #ECEFF4;">git status</span>
               </div>
-              <div class="text-nord-4 text-sm ml-4 font-mono">
+              <div class="text-sm ml-4 font-mono" style="color: #D8DEE9;">
                 On branch feature/terminal-ui-nord-theme<br>
                 Changes not staged for commit:<br>
                 &nbsp;&nbsp;(use "git add &lt;file&gt;..." to update what will be committed)<br>
@@ -97,21 +73,22 @@
           </div>
 
           <!-- Command Input Area -->
-          <div class="mt-4 border-t border-nord-2 pt-4">
+          <div class="mt-4 pt-4" style="border-top: 1px solid #434C5E;">
             <div class="flex items-center">
-              <span class="text-nord-14 font-mono mr-2 text-terminal-lg">$</span>
+              <span class="font-mono mr-2 text-lg" style="color: #A3BE8C;">$</span>
               <div class="flex-1 relative">
                 <input 
                   type="text" 
-                  class="w-full bg-transparent text-terminal-fg font-mono text-terminal-lg outline-none border-none focus:ring-0"
+                  class="w-full bg-transparent font-mono text-lg outline-none border-none focus:ring-0"
+                  style="color: #ECEFF4;"
                   placeholder="Enter command..."
                   v-model="commandInput"
                   @keyup.enter="executeCommand"
                   ref="commandInput"
                 />
                 <!-- Cursor -->
-                <div class="absolute top-0 left-0 w-0.5 h-5 bg-terminal-cursor animate-pulse" 
-                     :style="{ left: cursorPosition + 'px' }"></div>
+                <div class="absolute top-0 left-0 w-0.5 h-5 animate-pulse" 
+                     style="background-color: #D8DEE9; left: 0px;"></div>
               </div>
             </div>
           </div>
@@ -171,5 +148,10 @@ onMounted(() => {
 
 .animate-pulse {
   animation: blink 1s infinite;
+}
+
+/* Ensure input placeholder uses Nord colors */
+input::placeholder {
+  color: #4C566A;
 }
 </style>
