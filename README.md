@@ -5,8 +5,10 @@ A modern, cross-platform terminal application built with **Tauri**, **NuxtJS**, 
 ## 🚀 Tech Stack
 
 - **Backend**: Rust with Tauri 2.6.0
-- **Frontend**: NuxtJS 3.17.5 (Vue.js 3)
+- **Frontend**: NuxtJS 3.17.5 (Vue.js 3.5.17)
 - **Styling**: TailwindCSS 4.1.10
+- **Terminal**: xTerm.js (planned integration)
+- **Database**: SurrealDB (planned integration)
 - **Build Tool**: Vite
 - **Package Manager**: npm
 
@@ -18,6 +20,8 @@ A modern, cross-platform terminal application built with **Tauri**, **NuxtJS**, 
 - **Responsive Design**: TailwindCSS-powered responsive interface
 - **Hot Reload**: Instant development feedback with NuxtJS HMR
 - **Type Safety**: Full TypeScript support
+- **Terminal Integration**: xTerm.js for advanced terminal capabilities
+- **Database Integration**: SurrealDB for data persistence
 
 ## 🛠️ Prerequisites
 
@@ -42,8 +46,8 @@ Visit [nodejs.org](https://nodejs.org/) or use a version manager like `nvm`.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ibourgeois/nebula-terminal.git
-   cd nebula-terminal
+   git clone https://github.com/ibourgeois/nebula.git
+   cd nebula
    ```
 
 2. **Install dependencies**
@@ -131,16 +135,20 @@ nebula/
 ├── layouts/                      # NuxtJS layouts
 ├── pages/                        # NuxtJS pages
 ├── public/                       # Static assets
+├── server/                       # Server-side code
+│   └── tsconfig.json            # TypeScript config for server
 ├── src-tauri/                    # Tauri backend
 │   ├── src/
-│   │   ├── lib.rs               # Rust library code
+│   │   ├── lib.rs               # Rust library code with tests
 │   │   └── main.rs              # Tauri main entry
 │   ├── Cargo.toml               # Rust dependencies
-│   └── tauri.conf.json          # Tauri configuration
+│   ├── tauri.conf.json          # Tauri configuration
+│   └── build.rs                 # Build script
 ├── app.vue                      # Main Vue component
 ├── nuxt.config.ts               # NuxtJS configuration
 ├── tailwind.config.js           # TailwindCSS configuration
 ├── package.json                 # Node.js dependencies
+├── tsconfig.json                # TypeScript configuration
 └── README.md                    # This file
 ```
 
@@ -214,6 +222,13 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 - `test:` Test additions/changes
 - `chore:` Build/tooling changes
 
+### Development Guidelines
+
+- Write unit tests for all new functionality
+- Follow the existing code style and patterns
+- Update documentation for new features
+- Ensure all tests pass before submitting PRs
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -224,14 +239,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [NuxtJS](https://nuxt.com/) - Vue.js framework
 - [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [Rust](https://rust-lang.org/) - Systems programming language
+- [xTerm.js](https://xtermjs.org/) - Terminal emulator for the web
+- [SurrealDB](https://surrealdb.com/) - Multi-model database
 
 ## 📞 Support
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/ibourgeois/nebula-terminal/issues) page
+1. Check the [Issues](https://github.com/ibourgeois/nebula/issues) page
 2. Create a new issue with detailed information
 3. Include your operating system and version information
+
+## 🔮 Roadmap
+
+- [ ] xTerm.js integration for terminal functionality
+- [ ] SurrealDB integration for data persistence
+- [ ] Advanced terminal features (tabs, split panes)
+- [ ] Custom themes and color schemes
+- [ ] Plugin system for extensibility
+- [ ] Cross-platform package distribution
 
 ---
 
